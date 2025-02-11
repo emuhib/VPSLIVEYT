@@ -76,6 +76,12 @@ Untuk memulai live streaming di YouTube, gunakan perintah berikut:
 ffmpeg -stream_loop -1 -re -i /root/live.mp4 -f flv -c:v copy -c:a copy rtmp://a.rtmp.youtube.com/live2/your_StreamKey
 ```
 
+Untuk memulai live streaming di YouTube dengan timeout, misalnya ingin live 10 jam saja maka gunakan perintah berikut:
+```bash
+timeout 10h ffmpeg -stream_loop -1 -re -i /root/live.mp4 -f flv -c:v copy -c:a copy rtmp://a.rtmp.youtube.com/live2/your_StreamKey
+```
+
+
 ### Penjelasan:
 - **`/root/live.mp4`**: Path file video Anda (pastikan file ini sudah ada di server).
 - **`your_StreamKey`**: Ganti dengan Stream Key dari YouTube Live.
